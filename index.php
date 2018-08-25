@@ -1,5 +1,6 @@
 <?php
 require_once 'components/db_functions.php';
+require_once 'components/db.php';
 require_once 'layouts/header.php';
 ?>
 
@@ -10,6 +11,7 @@ require_once 'layouts/left-sidebar.php';
 
 
 <?php
+
 //$stmt = $conn->query("SELECT * FROM news");
 //$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

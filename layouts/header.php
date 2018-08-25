@@ -2,6 +2,8 @@
 // session_start();
 require_once 'cookies_sessions/session_on.php';
 require_once 'components/db_functions.php';
+require_once 'components/db.php';
+$my_sql_db = new MysqliDb("localhost", "root", "", "nevs_app");
 if(isset($_SESSION['id']) && !empty($_SESSION['id'])) {
     $user_id = $_SESSION['id'];
 //$sql = "select * from register_s where id =" . $id;

@@ -94,8 +94,8 @@ if (isset($_POST["save"])) {
             }
             /////////
 
-            $db = new Database("nevs_app", "root", "", "localhost");
-            $db->insert('news', $fields=array(
+            // $db = new Database("nevs_app", "root", "", "localhost");
+            $my_sql_db->insert('news', $fields=array(
                 'title' => $title ,
                 'description' => $description,
                 'content' => $content,

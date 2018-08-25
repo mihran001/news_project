@@ -134,8 +134,9 @@ if (isset($_POST["submit"])) {
                 }
             }
 
-            $db = new Database("nevs_app", "root", "", "localhost");
-            $db->insert('registr_s', $fields=array(
+            // $db = new Database("nevs_app", "root", "", "localhost");
+            $my_sql_db = new MysqliDb("localhost", "root", "", "nevs_app");
+            $my_sql_db->insert('registr_s', $fields=array(
                 'f_name' => $f_name,
                 'l_name' => $l_name,
                 'email' => $email,

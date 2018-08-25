@@ -5,12 +5,10 @@ require_once 'layouts/header.php';
 
 
 <?php
+
 $sql_count = "select cat.id,cat.title, COUNT(*) as count from categories as cat left join news as new on cat.id = new.category_id GROUP BY cat.title  ORDER BY count ASC";
 $stmt_count = $conn->query($sql_count);
 $counts = $stmt_count->fetchAll();
-//echo "<pre>";
-//var_dump($counts);
-//die();
 ?>
 
 

@@ -1,6 +1,6 @@
 <?php
 require_once 'components/db_functions.php';
-
+require_once 'components/db.php';
 require_once 'layouts/header.php';
 require_once 'cookies_sessions/session_on.php';
 require_once 'valid/admin_validate.php';
@@ -28,7 +28,24 @@ if (isset($_POST["singlebutton"])) {
 
     } else {
 
-        $query = $conn->query("Select * from registr_s where email = '$sign_email' and password ='$sign_password' ");
+        // // $my_sql_db = new MysqliDb("localhost", "root", "", "nevs_app");
+        //        $table = 'registr_s';
+        //        $where = '' ;
+        //        $limit = '';
+        //        $order = '';
+        //        $where_mode = '';
+        //        $select_fields = '*';
+        //        $my_sql_db-> get('registr_s', (
+        //         'email'=> $sign_email , 
+        //         'password'=> $sign_password
+        //        ));
+            //    var_dump($my_sql_db);
+            //    $conn->select($table, $where =array('email'=>$sign_email , 'password'=>$sign_password), $limit, $order, $where_mode, $select_fields)->result_array();
+            //    $data->email($email );
+              
+               
+
+       $query = $conn->query("Select * from registr_s where email = '$sign_email' and password ='$sign_password' ");
         $count = $query->rowcount();
         $row = $query->fetch();
 
